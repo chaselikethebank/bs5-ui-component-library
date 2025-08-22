@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Connect Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Helper styles for placeholders only */
+        .placeholder-card-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9ecef;
+            min-height: 200px;
+        }
+        .placeholder-card-image i {
+            font-size: 4rem;
+            color: #ced4da;
+        }
+    </style>
+</head>
+<body class="bg-body-tertiary">
+
+    <!-- Component 1: Title with Cards (No Filter Bar) -->
+    <section class="py-5">
+        <div class="container">
+            <h1 class="display-1 fw-bold text-center text-body-secondary mb-5">CONNECT</h1>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Large Cards -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                
+                <!-- Small Cards -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Component 2: Title with Filter Tabs and Cards -->
+    <section class="py-5">
+        <div class="container">
+            <h1 class="display-1 fw-bold text-center text-body-secondary mb-4">CONNECT</h1>
+            
+            <!-- Filter Tabs -->
+            <ul class="nav nav-tabs justify-content-center border-0 mb-5" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" type="button">THE WOODLANDS</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" type="button">WOODFOREST</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" type="button">MONTGOMERY</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" type="button">CREEKSIDE</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" type="button">THE WOODLANDS (ESP)</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" type="button">CREEKSIDE (ESP)</button></li>
+            </ul>
+            
+            <!-- Card Grid -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Large Cards -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="placeholder-card-image card-img-top"><i class="bi bi-image"></i></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="small mb-2"><strong>Campus Location:</strong> <span class="badge rounded-pill text-bg-secondary fw-normal">The Woodlands</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 pt-0"><a href="#" class="btn btn-primary rounded-pill px-4">BUTTON TEXT</a></div>
+                    </div>
+                </div>
+                
+                <!-- Small Cards -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex align-items-center p-3">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="placeholder-card-image rounded" style="width: 70px; height: 70px; min-height: auto;"><i class="bi bi-image fs-4"></i></div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold">Card Title</h6>
+                                <p class="card-text small mb-0"><strong>Campus:</strong> The Woodlands<br>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

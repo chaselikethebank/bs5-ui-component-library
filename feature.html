@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Feature Sections</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Helper styles for placeholders */
+        .placeholder-feature-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0; /* A slightly darker placeholder bg */
+            width: 100%;
+            min-height: 300px;
+        }
+        .placeholder-feature-image i {
+            font-size: 6rem;
+            color: #f8f9fa;
+        }
+        
+        /* Custom style needed for the centered-text-over-image effect */
+        .feature-center-bg {
+            position: relative;
+            z-index: 1;
+            min-height: 50vh; /* Give the section some height */
+        }
+        .feature-center-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="%23e0e0e0" class="bi bi-image" viewBox="0 0 16 16"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/></svg>') no-repeat center center;
+            background-size: contain;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-body-tertiary">
+
+    <!-- Feature 1: Text Align Left -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <h1 class="display-2 fw-bold">Text Align Left</h1>
+                    <a href="#" class="btn btn-primary mt-3 px-4 py-2">BUTTON TEXT</a>
+                </div>
+                <div class="col-md-6">
+                    <div class="placeholder-feature-image rounded">
+                        <!-- Image content would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Feature 2: Text Align Center -->
+    <section class="py-5 feature-center-bg d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <h1 class="display-2 fw-bold">Text Align Center</h1>
+            <a href="#" class="btn btn-primary mt-3 px-4 py-2">BUTTON TEXT</a>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Feature 3: Text Align Right -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 order-md-2 text-md-end">
+                    <h1 class="display-2 fw-bold">Text Align Right</h1>
+                    <a href="#" class="btn btn-primary mt-3 px-4 py-2">BUTTON TEXT</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="placeholder-feature-image rounded">
+                        <!-- Image content would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

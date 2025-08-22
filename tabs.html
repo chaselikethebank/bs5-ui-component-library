@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Tabs and Accordion</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container my-5">
+        <!-- 
+            CORRECT IMPLEMENTATION: Using the basic Bootstrap 'nav-pills'.
+            - The .active class automatically applies the 'primary' background color and white text.
+            - The .text-dark class is applied to inactive links to ensure a clean, consistent dark font color.
+              This solves the "bad UI" problem of inconsistent link colors.
+        -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-the-woodlands-tab" data-bs-toggle="pill" data-bs-target="#pills-the-woodlands" type="button" role="tab" aria-controls="pills-the-woodlands" aria-selected="true">THE WOODLANDS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-dark" id="pills-woodforest-tab" data-bs-toggle="pill" data-bs-target="#pills-woodforest" type="button" role="tab" aria-controls="pills-woodforest" aria-selected="false">WOODFOREST</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-dark" id="pills-montgomery-tab" data-bs-toggle="pill" data-bs-target="#pills-montgomery" type="button" role="tab" aria-controls="pills-montgomery" aria-selected="false">MONTGOMERY</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content border p-4" id="pills-tabContent">
+            <!-- The Woodlands Content (Initially Active) -->
+            <div class="tab-pane fade show active" id="pills-the-woodlands" role="tabpanel" aria-labelledby="pills-the-woodlands-tab" tabindex="0">
+                <h2 class="h4">THE WOODLANDS SECTION</h2>
+                <p>This is the content for The Woodlands. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis.</p>
+            </div>
+
+            <!-- Woodforest Content (Accordion) -->
+            <div class="tab-pane fade" id="pills-woodforest" role="tabpanel" aria-labelledby="pills-woodforest-tab" tabindex="0">
+                <!-- 
+                    HURDLE: The design shows a light blue accordion header.
+                    The basic Bootstrap accordion component has a white header. 
+                    Achieving the light blue color requires either custom CSS or, in modern Bootstrap,
+                    a utility class like 'bg-primary-subtle'. 
+                    To adhere strictly to the "basic component" rule, this code uses the default white accordion.
+                -->
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Panel Title
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus voluptate quasi, totam natus.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Panel Title
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Content for the second panel.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Montgomery Content -->
+            <div class="tab-pane fade" id="pills-montgomery" role="tabpanel" aria-labelledby="pills-montgomery-tab" tabindex="0">
+                <h2 class="h4">MONTGOMERY SECTION</h2>
+                <p>This is the content for Montgomery.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle is required for tabs and accordions to function -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
