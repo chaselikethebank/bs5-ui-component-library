@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Image Overlays</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom CSS for the faint background icon effect */
+        .bg-icon-overlay {
+            position: relative; /* Required for positioning the pseudo-element */
+            z-index: 1; /* Ensures content is not covered by other elements */
+        }
+        .bg-icon-overlay::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            /* Faint placeholder icon using an SVG with low opacity fill */
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="rgba(255,255,255,0.05)"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -1; /* Places the icon behind the content */
+        }
+    </style>
+</head>
+<body class="bg-body-tertiary">
+
+    <!-- Component 1: Text Overlay on Background -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Text Overlay on Background</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <h3 class="fw-bold">SECTION TITLE</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus voluptate quasi, totam natus.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <h3 class="fw-bold">SECTION TITLE</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus voluptate quasi, totam natus.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Component 2: Icon Feature on Background -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Icon Feature on Background</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <div class="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center fw-bold mb-4" style="width: 70px; height: 70px;">ICON</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus voluptate quasi, totam natus.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <div class="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center fw-bold mb-4" style="width: 70px; height: 70px;">ICON</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus voluptate quasi, totam natus.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Component 3: Mixed Column Layouts -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Mixed Column Layouts on Background</h2>
+            <div class="row g-4">
+                <!-- Full Width Component -->
+                <div class="col-12">
+                    <div class="bg-dark text-white p-5 rounded bg-icon-overlay">
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <div class="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center fw-bold mb-4" style="width: 70px; height: 70px;">ICON</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere, maxime sed veritatis temporibus.</p>
+                                <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                            </div>
+                            <div class="col-md-5 d-none d-md-flex justify-content-center align-items-center">
+                                <!-- This is a content image, not a background, but we make it faint to match the style -->
+                                <i class="bi bi-image display-1 text-white-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Half Width Components -->
+                <div class="col-md-6">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <div class="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center fw-bold mb-4" style="width: 70px; height: 70px;">ICON</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-dark text-white p-5 rounded h-100 bg-icon-overlay">
+                        <div class="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center fw-bold mb-4" style="width: 70px; height: 70px;">ICON</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum cum asperiores voluptate iure ea sapiente illo error non veritatis. Tempora laudantium esse, tenetur placeat perferendis facere.</p>
+                        <a href="#" class="btn btn-light mt-3">BUTTON TEXT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
